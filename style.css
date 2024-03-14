@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #0275d8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .phone-number {
+    display: inline-block;
+    background-color: #ffbf00;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
