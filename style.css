@@ -74,7 +74,19 @@ header {
 }
 
 section {
-    padding: 0 20px;
+    padding: 20px 20px;
+}
+
+.hero {
+    background-image: url('example.png');
+    background-color: #0fffff;
+    max-width: 100%;
+}
+
+.hero-content, .info-content {
+    background-color: white;
+    max-width: 750px;
+    margin: auto;
 }
 
 a {
