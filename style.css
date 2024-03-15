@@ -79,7 +79,6 @@ section {
 
 .hero {
     background-image: url('example.png');
-    background-color: #0fffff;
     max-width: 100%;
 }
 
@@ -90,14 +89,14 @@ section {
 }
 
 a {
-    color: #ffbf00;
+    color: white;
     text-decoration: none;
     transition: all 0.23 ease-in-out;
     display: inline-block;
 }
 
 a:hover {
-    color: #3498db;
+    color: black;
 }
 
 button {
