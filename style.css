@@ -28,12 +28,23 @@
     src: url('static/fonts/roboto/Roboto-Thin.ttf') format('truetype');
 }
 
-h1, h2 {
+h1 {
     font-family: 'Roboto-Black', sans-serif;
 }
 
 h1 {
     font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Roboto-Bold';
+}
+
+.tagline {
+    text-align: center;
+    color: black;
+    margin: -20px 0 10px 0;
 }
 
 body, html {
@@ -49,6 +60,10 @@ body {
 
 .content-wrap {
     flex: 1;
+}
+
+.art {
+    width: 100%
 }
 
 .logo {
@@ -78,12 +93,30 @@ section {
 }
 
 .hero {
-    background-image: url('example.png');
+    position: relative;
+    background-image: url('static/graphics/towTruckArt.webp');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero-content, .info-content {
-    background-color: white;
+    position: relative;
+    z-index: 2;
+    color: black;
     max-width: 750px;
     margin: auto;
 }
@@ -96,13 +129,13 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: #ffff00;
 }
 
 button {
     background-color: #0275d8;
     border: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-size: 1.75rem;
     font-family: 'Roboto-Black', sans-serif;
 }
@@ -112,4 +145,10 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+p {
+    font-family: 'Roboto-Medium';
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
