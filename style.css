@@ -210,6 +210,11 @@ header {
     margin: auto;
     text-align: center;
 }
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: left;
+}
 .body-content {
     max-width: 750px,
 }
@@ -240,11 +245,14 @@ header {
     background-color: #0275d8;
 }
 .paragraph {
-    font-family: 'Roboto-Medium';
-    max-width: 750px;
+    font-family: 'Roboto-Regular';
     margin: auto;
     font-size: 1.23rem;
     line-height: 1.5;
+}
+.text-left {
+    text-align: left;
+    line-height: 2;
 }
 /* Styling for Specific Sections */
 .hero-content {
@@ -260,7 +268,7 @@ header {
     position: relative;
 }
 .hero-content homepage {
-    height: 500px;
+    height: 800px !important;
 }
 .hero-content contactpage {
     height: 200px;
@@ -306,7 +314,6 @@ footer {
 /* Typography */
 h1, h2 {
     text-align: center;
-    color: white;
     line-height: 1;
 }
 h1 {
