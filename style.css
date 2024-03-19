@@ -417,11 +417,16 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
     text-align: left;
-    max-width: 750px;
+    max-width: 780px;
     margin: auto;
     margin-bottom: 30px;
+    height: 500;
+}
+.service-text, 
+.service-image {
+    width: 100%;
+    height: 100%;
 }
 
 .service-text {
@@ -431,7 +436,14 @@ h2 {
 }
 
 .service-image {
-    margin-top: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+}
+.service-image img {
     width: 100%;
     height: auto;
 }
@@ -449,19 +461,32 @@ h2 {
 @media (min-width: 768px) { /* Adjust to your preferred breakpoint */
     .service-item {
         flex-direction: row;
-        text-align: left;
         align-items: flex-start;
+        text-align: left;
+        height: 250px;
     }
 
-    .service-item:nth-child(even) {
-        flex-direction: row-reverse;
+    .service-item:nth-child(even) .service-text {
+        order: 2; /* Move text to the right on even items */
+    }
+
+    .service-item:nth-child(even) .service-image {
+        order: 1; /* Move image to the left on even items */
+        margin-right: 20px;
+    }
+
+    .service-item:nth-child(odd) .service-image {
+        margin-left: 20px;
     }
 
     .service-image {
         flex: 1;
-        margin-top: 0;
-        margin-left: 15px;
-        margin-right: 15px;
+        height: 100%;
+    }
+
+    .service-image img {
+        height: 100%;
+        width: auto;
     }
 
     .service-text {
@@ -469,9 +494,3 @@ h2 {
     }
 }
 
-/* Ensure images don't exceed their containers and are responsive */
-.service-image img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* This removes any extra space below the image */
-}
