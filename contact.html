@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sterling VA Towing Services</title>
+    <meta name="description" content="Need fast and reliable towing services in Sterling, VA? Contact Sterling Towing Co. now for 24/7 emergency towing and roadside assistance.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="mobile-navbar">
+        <a class="logo" href="/">
+            <img src="static/graphics/blacktruckwhiteinner.png" alt="Sterling Towing Co. Logo">
+        </a>
+        <button class="dropdown-toggle">
+            <img class="burger" src="static/icons/burger.png" alt="menu button">
+        </button>
+        <div class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="/towing-and-services">Towing and Services</a>
+            <a href="/about-us">About Us</a>
+            <a href="/contact-us">Contact Us</a>
+        </div>
+    </nav>
+    <nav class="navbar">
+        <div>
+            <a class="logotype">Sterling Towing Co.</a>
+        </div>
+        <div class="navlinks">
+            <a class="link" href="/">Home</a>
+            <a class="link" href="/towing-and-services">Towing and Services</a>
+            <a class="link" href="/about-us">About Us</a>
+            <a class="link" href="/contact-us">Contact Us</a>
+        </div>
+        <div class="nav-phone-number">
+            <a class="highlighted" href="tel+15714407613">(571) 440-7613</a>
+        </div>
+    </nav>
+    <div class="content-wrap">
+        <section class="hero-content contactpage contact-hero">
+            <div class="hero-content-inner">
+                <h1>Contact Sterling Towing Co.</h1>
+            </div>
+        </section>
+        <section class="body-content">
+            <form class="contact-form" action="submit.php" method="post">
+                <div class="input-row">
+                    <label for="first-name">First Name</label>
+                    <input class="half-size-input" type="text" id="first-name" name="first-name" placeholder="Steve" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input class="half-size-input" type="text" id="last-name" name="last-name" placeholder="Jobs" required>
+
+                </div>
+
+                <label for="business">Business Name</label>
+                <input type="text" name="business" id="business" placeholder="Apple">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="steve@apple.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(571) 123-4567" required>
+
+                <label for="message">Your Message Here</label>
+                <textarea id="message" name="message" maxlength="250" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sterling Towing Co. | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
