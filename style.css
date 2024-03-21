@@ -156,6 +156,10 @@ section {
     font-family: 'Roboto-Black', sans-serif;
     display: none;
 }
+.logotype-mobile {
+    font-family: 'Roboto-Black', sans-serif;
+    display: block;
+}
 .logo {
     height: 59px;
     display: none;
@@ -188,6 +192,9 @@ header {
     }
     .logotype {
         display: block;
+    }
+    .logotype-mobile {
+        display: none;
     }
     .nav-message {
         width: 100px;
