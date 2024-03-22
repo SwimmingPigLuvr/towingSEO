@@ -244,20 +244,24 @@ header {
     color: white;
     font-size: 2.5rem;
     text-align: center;
+    display: none;
 }
 .phone-number-large:hover {
     color: #0275d8;
 }
 .contact {
     position: relative;
-    display: block;
+    display: inline-block; /* Changed to inline-block for <a> elements */
     margin: auto;
     margin-top: 20px;
-    background-color: black;
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.4); /* Opaque background */
+    padding: 1rem 1.5rem;
     font-size: 2rem;
     font-family: 'Roboto-Bold', sans-serif;
     border: 2px solid white;
+    text-align: center;
+    color: white; /* Assuming you want white text */
+    text-decoration: none; /* Remove underline from links */
 }
 .contact:hover {
     background-color: #0275d8;
@@ -277,7 +281,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     text-align: center;
     background-image: url('static/graphics/shadedTowArt.jpg');
     background-size: cover;
@@ -329,21 +333,27 @@ header {
     max-width: 900px;
     margin: auto;
     padding: 20px;
-    margin-bottom: 200px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
 }
 .services-list a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 500px;
     width: 100%;
     padding: 20px;
     margin: auto;
     color: black;
-    text-align: left;
+    text-align: center;
     font-family: 'Roboto-Bold', sans-serif;
     font-size: 2rem;
     list-style-type: none;
     line-height: 2;
+}
+.services-list a:hover {
+    background-color: rgba(10, 100, 200, 0.333);
 }
 
 /* Footer */
@@ -548,7 +558,7 @@ h2 {
 .mobile-footer {
     width: 100%;
     margin: auto;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     background-color: #000;
@@ -580,11 +590,44 @@ h2 {
     .services-list {
         margin-bottom: 0;
     }
-    .services-list a {
-        text-align: left;
-        margin: 0;
-    }
     footer {
         transform: translateY(0);
     }
+    .phone-number-large {
+        display: block;
+    }
+}
+
+.emoji-large {
+    font-size: 7rem;
+}
+.google-map {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* contact footer with all the business info */
+.contact-footer {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: #0275d8;
+    width: 100%;
+    padding: 40px;
+    line-height: 2;
+}
+.contact-footer-info {
+    display: flex;
+    flex-direction: column;
+}
+.contact-footer-section {
+
+}
+.contact-footer-info a:hover {
+    color: black;
+}
+.strong {
+    font-family: 'Roboto-Bold', sans-serif;
 }
