@@ -216,6 +216,10 @@ header {
 }
 
 .contact-info {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     z-index: 3;
     text-align: center;
 }
@@ -250,18 +254,16 @@ header {
     color: #0275d8;
 }
 .contact {
-    position: relative;
-    display: inline-block; /* Changed to inline-block for <a> elements */
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Opaque background */
-    padding: 1rem 1.5rem;
+    width: 350px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
     font-size: 2rem;
     font-family: 'Roboto-Bold', sans-serif;
     border: 2px solid white;
     text-align: center;
-    color: white; /* Assuming you want white text */
-    text-decoration: none; /* Remove underline from links */
+    color: white;
+    text-decoration: none;
 }
 .contact:hover {
     background-color: #0275d8;
@@ -281,7 +283,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     text-align: center;
     background-image: url('static/graphics/shadedTowArt.jpg');
     background-size: cover;
@@ -291,7 +293,7 @@ header {
     padding: 80px 20px;
 }
 .homepage {
-    height: 800px;
+    height: 95vh;
 }
 .services-hero {
     height: 500px;
@@ -300,11 +302,11 @@ header {
     height: 200px;
 }
 .hero-content-inner {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-items: center;
     line-height: 1;
-    margin-bottom: 20px;
 }
 .hero-content::before {
     content: '';
@@ -318,8 +320,9 @@ header {
 }
 .hero-content h1,
 .hero-content h2,
-.hero-content phone-number-large,
-.hero-content, .contact
+.hero-content .phone-number-large,
+.hero-content .contact-info
+.hero-content .contact
 .hero-content ul,
 .hero-content p {
     text-transform: uppercase;
@@ -329,11 +332,15 @@ header {
 }
 
 /* services list on the homepage */
+.services {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
 .services-list {
-    max-width: 900px;
     margin: auto;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -341,19 +348,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 500px;
     width: 100%;
     padding: 20px;
     margin: auto;
     color: black;
     text-align: center;
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 2rem;
-    list-style-type: none;
     line-height: 2;
 }
 .services-list a:hover {
-    background-color: rgba(10, 100, 200, 0.333);
+    /* background-color: rgba(10, 100, 200, 0.333); */
 }
 
 /* Footer */
@@ -559,7 +562,7 @@ h2 {
     width: 100%;
     margin: auto;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     background-color: #000;
     padding: 40px 0;
@@ -577,18 +580,49 @@ h2 {
     margin-bottom: 400px;
 }
 
+/* bookmark this */
 @media (min-width: 768px) {
+    hr {
+        display: none;
+    }
+    .services {
+        padding: 40px;
+        max-width: 1000px;
+        text-align: left;
+    }
+    .services-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .services-list a {
+        width: calc(50% - 40px);
+        margin: 10px;
+        text-align: left;
+    }
     .mobile-footer {
         display: none;
     }
+    .contact-info {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact {
+        position: static;
+        margin: 20px auto;
+        display: block;
+    }
     .homepage {
-        height: 650px;
+        height: 400px;
     }
     .services-hero {
         height: 200px;
     }
     .services-list {
         margin-bottom: 0;
+        display: flex;
     }
     footer {
         transform: translateY(0);
@@ -629,5 +663,17 @@ h2 {
     color: black;
 }
 .strong {
+    font-family: 'Roboto-Black', sans-serif;
+}
+hr {
+    width: 100%;
+    border: 2px solid black;
+}
+.service-title {
     font-family: 'Roboto-Bold', sans-serif;
+    font-size: 2rem;
+}
+.description {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 0.5rem;
 }
