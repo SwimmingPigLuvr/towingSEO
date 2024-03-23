@@ -333,35 +333,81 @@ header {
 
 /* services list on the homepage */
 .services {
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.services h2 {
+    color: #333;
+    margin-bottom: 30px;
 }
 .services-list {
     margin: auto;
-    padding: 20px;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
 }
 .services-list a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-    margin: auto;
-    color: black;
     text-align: center;
-    line-height: 2;
+    display: block;
+    padding: 30px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    flex-direction: column;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .services-list a:hover {
-    /* background-color: rgba(10, 100, 200, 0.333); */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75)
+}
+.service-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.description {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    text-align: left;
+}
+.emoji-large {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 6rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .services-list a {
+        text-align: left;
+        width: calc(50% - 20px); /* Adjust width for 2-column layout */
+        float: left; /* Float elements for side-by-side layout */
+        margin-right: 20px; /* Spacing between columns */
+        margin-bottom: 20px; /* Increased spacing between rows */
+    }
+
+    .services-list a:nth-of-type(2n) {
+        margin-right: 0; /* Removes margin from every second item to maintain grid */
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-list a {
+        width: calc(33.333% - 20px); /* Adjust width for 3-column layout */
+    }
+
+    .services-list a:nth-of-type(1n) {
+        margin-right: 0; /* Adjusts margin reset for 3-column layout */
+    }
 }
 
 /* Footer */
 footer {
-    background-color: #321;
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 10px;
@@ -370,7 +416,7 @@ homepage-mobile-footer {
     transform: translateY(-190px);
 }
 footer a:hover {
-    color: #567;
+    color: rgba(200, 200, 200);
 }
 
 /* Typography */
@@ -596,11 +642,6 @@ h2 {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .services-list a {
-        width: calc(50% - 40px);
-        margin: 10px;
-        text-align: left;
-    }
     .mobile-footer {
         display: none;
     }
@@ -632,9 +673,6 @@ h2 {
     }
 }
 
-.emoji-large {
-    font-size: 7rem;
-}
 .google-map {
     max-width: 500px;
     margin: auto;
@@ -642,6 +680,8 @@ h2 {
 
 /* contact footer with all the business info */
 .contact-footer {
+    display: flex;
+    flex-direction: column;
     color: white;
     text-transform: uppercase;
     font-family: 'Roboto-Regular', sans-serif;
@@ -657,10 +697,10 @@ h2 {
     flex-direction: column;
 }
 .contact-footer-section {
-
+    margin-top: 10px;
 }
 .contact-footer-info a:hover {
-    color: black;
+    color: rgba(200, 200, 200);
 }
 .strong {
     font-family: 'Roboto-Black', sans-serif;
@@ -669,11 +709,11 @@ hr {
     width: 100%;
     border: 2px solid black;
 }
-.service-title {
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 2rem;
-}
-.description {
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 0.5rem;
+@media (min-width: 768px) {
+    .contact-footer {
+        flex-direction: row;
+    }
+    .contact-footer-section {
+        margin-right: 40px;
+    }
 }
