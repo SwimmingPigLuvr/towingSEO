@@ -702,3 +702,9 @@ hr {
 .where h1 {
     text-align: center;
 }
+.about-content img {
+    max-width: 100%;
+}
+.extra-space {
+    margin: 100px;
+}
