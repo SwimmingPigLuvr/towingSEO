@@ -333,9 +333,10 @@ header {
 
 /* services list on the homepage */
 .services {
-    max-width: 750px;
+    max-width: 1200px;
+    width: 100%;
     margin: 20px auto;
-    padding: 20px;
+    padding: 40px;
     background-color: #f8f8f8;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -511,7 +512,7 @@ h2 {
 /* Responsive adjustments */
 @media (min-width: 927px) {
     .contact-form {
-        margin: auto;
+        margin: 40px auto;
         padding: 20px;
     }
 }
@@ -607,8 +608,7 @@ h2 {
         display: none;
     }
     .services {
-        padding: 40px;
-        max-width: 1000px;
+        /* padding: 40px; */
         text-align: left;
     }
     .services-list {
@@ -618,7 +618,7 @@ h2 {
         justify-content: center;
     }
     .mobile-footer {
-        display: none;
+        display: block;
     }
     .contact-info {
         flex-direction: row;
@@ -631,7 +631,7 @@ h2 {
         display: block;
     }
     .homepage {
-        height: 300px;
+        height: 400px;
     }
     .services-hero {
         height: 200px;
