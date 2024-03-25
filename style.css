@@ -214,6 +214,12 @@ header {
 .content-wrap {
     flex: 1;
 }
+.padding-20 {
+    padding: 20px;
+}
+.padding-40 {
+    padding: 40px;
+}
 
 .contact-info {
     max-width: 500px;
@@ -697,7 +703,6 @@ hr {
 .where {
     max-width: 750px;
     margin: auto;
-    padding: 20px;
 }
 .where h1 {
     text-align: center;
@@ -707,4 +712,80 @@ hr {
 }
 .extra-space {
     margin: 100px;
+}
+.reviews {
+    background-color: #0275d8;
+    width: 100%
+}
+.reviews h2 {
+    color: white;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    margin: auto;
+    height: 300px;
+    padding: 0 40px;
+}
+
+.carousel-items .carousel-item {
+    margin: 40px auto;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+.carousel-item {
+    max-width: 500px;
+    margin: auto;
+}
+.carousel-item.active {
+    display: block;
+}
+
+.pfp {
+    width: 50px;
+    margin-top: -50px;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+.stars {
+    width: 200px;
+    margin-top: -10px;
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-family: 'Roboto-Black', sans-serif;
+    transition: 0.2s ease;
+    font-size: 3rem;
+    z-index: 10;
+}
+.prev:hover, .next:hover {
+    color: white;
+}
+.prev {
+    left: -5px;
+    border: none;
+}
+.next {
+    right: -5px;
+    border: none;
+}
+
+.review-name {
+    margin-top: 5px;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #999;
+}
+.review-text {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 1.5rem;
+
 }
