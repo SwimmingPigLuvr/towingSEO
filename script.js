@@ -23,21 +23,28 @@ document.addEventListener('click', function(e) {
 });
 
 
-// carousel
-let slideIndex = 1;
-showSlides(slideIndex);
+let startX, isDown = false, scrollLeft;
 
-function moveSlide(n) {
-    showSlides(slideIndex += n);
-}
+const slider = document.querySelector('.carousel-items');
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("carousel-item");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-}
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+slider.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX); // The distance dragged
+  slider.scrollLeft = scrollLeft - walk;
+});
